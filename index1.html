@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCB - Royal Challengers Bangalore | Forever Bold</title>
+
+  <link rel="stylesheet" href="style1.css">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header class="hero animate_animated animate_fadeInDown">
+    <img src="rcb logo.jpg" alt="RCB Logo" style="width:90px;margin-bottom:1rem;filter:drop-shadow(0 0 16px #ff1744);animation:glow 2s infinite alternate;">
+    <h1 class="animate_animated animate_fadeInUp">PLAY BOLD</h1>
+    <h2 class="animate_animated animate_fadeInUp">Royal Challengers Bangalore</h2>
+    <p class="subtitle animate_animated animate_fadeInUp">The Pride of Bangalore. Forever Bold.</p>
+    <div class="hero-stats animate_animated animate_fadeInUp">
+      <span>🏆 3 IPL Finals</span>
+      <span>🔥 263/5 Highest IPL Score</span>
+      <span>💥 1000+ Sixes</span>
+    </div>
+    <a href="#fanbase" class="animate_animated animatepulse animate_infinite" style="margin:1.5rem 0 0 0;display:inline-block;padding:0.8rem 2.2rem;background:#ff1744;color:#fff;font-weight:bold;border-radius:30px;font-size:1.2rem;text-decoration:none;box-shadow:0 2px 12px #ff1744cc;">Join the RCB Army</a>
+  </header>
+
+  <!-- NAVIGATION -->
+  <button class="nav-toggle" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
+  <nav class="nav">
+    <img src="cup pic.jpg" alt="RCB Logo" class="nav-logo">
+    <a href="#about">About</a>
+    <a href="#records">Records</a>
+    <a href="#squad">Squad</a>
+    <a href="#fanbase">Fans</a>
+    <a href="#matches">Matches</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#shop">Shop</a>
+    <a href="#membership">Membership</a>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>About RCB</h2>
+  <div style="display:flex;flex-direction:column;align-items:center;max-width:700px;margin:0 auto;">
+        <p style="font-size:1.15rem;">Founded in 2008, Royal Challengers Bangalore (RCB) is one of the most passionate and followed franchises in the IPL. Known for their iconic red and gold, RCB stands for <b>passion</b>, <b>loyalty</b>, and <b>fire</b> on and off the field. The team has been home to cricketing legends and is celebrated for its never-give-up attitude and electrifying fan base.</p>
+    </div>
+  </section>
+
+  <!-- NETWORK PARTICLES BACKGROUND -->
+  <canvas id="network-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;"></canvas>
+  <!-- FIREWORKS & CONFETTI ANIMATION (on page load only) -->
+  <div id="fireworks-container" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;pointer-events:none;background:transparent;overflow:hidden;"></div>
+  <div id="confetti-container" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9998;pointer-events:none;background:transparent;overflow:hidden;"></div>
+
+  <!-- ACHIEVEMENTS & RECORDS -->
+  <section id="records" class="section dark animate__animated animate__fadeInUp" style="text-align:center;">
+    <h2 class="animate__animated animate__tada">Achievements & Records</h2>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;">
+      <div class="records" style="flex:1;min-width:220px;">
+        <div class="achievement-card animate__animated animate__zoomIn" style="background:#181818;padding:1.2rem 1rem;border-radius:18px;box-shadow:0 2px 12px #ff1744;margin-bottom:1.2rem;">
+          <h3>🏏 Most Runs</h3>
+          <p>Virat Kohli (7000+ IPL Runs)</p>
+        </div>
+        <div class="achievement-card animate__animated animate__zoomIn" style="background:#181818;padding:1.2rem 1rem;border-radius:18px;box-shadow:0 2px 12px #ff1744;margin-bottom:1.2rem;">
+          <h3>💥 Fastest Century</h3>
+          <p>Chris Gayle (30 balls)</p>
+        </div>
+        <div class="achievement-card animate__animated animate__zoomIn" style="background:#181818;padding:1.2rem 1rem;border-radius:18px;box-shadow:0 2px 12px #ff1744;margin-bottom:1.2rem;">
+          <h3>🔥 Highest Team Total</h3>
+          <p>263/5 vs PWI (2013)</p>
+        </div>
+        <div class="achievement-card animate__animated animate__zoomIn" style="background:#181818;padding:1.2rem 1rem;border-radius:18px;box-shadow:0 2px 12px #ff1744;margin-bottom:1.2rem;">
+          <h3>🎯 Orange Cap</h3>
+          <p>Kohli (2016), Gayle (2011, 2012)</p>
+        </div>
+        <div class="achievement-card animate__animated animate__zoomIn" style="background:#181818;padding:1.2rem 1rem;border-radius:18px;box-shadow:0 2px 12px #ff1744;">
+          <h3>🏅 Purple Cap</h3>
+          <p>Harshal Patel (2021)</p>
+        </div>
+      </div>
+      <div style="flex:0 0 300px;max-width:350px;display:flex;justify-content:center;align-items:center;">
+        <img src="achievement pic.jpg" alt="RCB Achievements" class="animate__animated animate__fadeInRight" style="width:100%;max-width:320px;border-radius:24px;box-shadow:0 2px 16px #ff1744;">
+      </div>
+    </div>
+  </section>
+
+  <!-- SQUAD / PLAYER PROFILES -->
+  <section id="squad" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>Squad / Player Profiles</h2>
+    <div class="players">
+      <div class="player-card animate_animated animate_zoomIn" title="Captain & Batsman">
+        <img src="virat.jpg" alt="Virat Kohli">
+        <h3>Virat Kohli</h3>
+        <p>Captain & Batsman</p>
+        <span>9230 Runs | 123 Matches</span>
+      </div>
+      <div class="player-card animate_animated animate_zoomIn" title="Batsman">
+        <img src="Faf du plessis.jpg" alt="Faf du Plessis">
+        <h3>Faf du Plessis</h3>
+        <p>Captain 🏆</p>
+        <span>8798 Runs | 362 Matches</span>
+      </div>
+      <div class="player-card animate_animated animate_zoomIn" title="Batsman">
+        <img src="rajat patidar.jpg" alt="Rajat patidar">
+        <h3>Rajat patidar</h3>
+        <p>Batsman 🏏</p>
+        <span>2775 Runs| 91 Matches</span>
+      </div>
+      <div class="player-card animate_animated animate_zoomIn" title="Bowler">
+        <img src="yash.jpg" alt="Yash Dayal">
+        <h3>Yash Dayal</h3>
+        <p>Bowler 🎯</p>
+        <span>1390 Runs | 43 Matches</span>
+      </div>
+      <div class="player-card animate_animated animate_zoomIn" title="Bowler">
+        <img src="livingstone.jpg" alt="Liam living stone">
+        <h3>Liam livingstone</h3>
+        <p>All-rounder ⚡</p>
+        <span>932 Runs | 15 Matches</span>
+      </div>
+      <div class="player-card animate_animated animate_zoomIn" title="All-Rounder">
+        <img src="josh hazlewood.jpg" alt="Josh Hazlewood">
+        <h3>Josh Hazlewood</h3>
+        <p>Bowler 🔥</p>
+        <span>1196 Runs | 224 Matches</span>
+      </div>
+      <div class="player-card animate_animated animate_zoomIn" title="All-Rounder">
+        <img src="bhuvneshwar .jpg" alt="Bhuvneshwar kumar">
+        <h3>Bhuvneshwar kumar</h3>
+        <p>Bowler (Swing) 🌪</p>
+        <span>552 Run | 21 Matches</span>
+      </div>
+
+    </div>
+    <p style="margin-top:1.5rem;font-size:1.1rem;">Categories: <b>Batsmen</b>, <b>Bowlers</b>, <b>All-rounders</b>, <b>Captains</b></p>
+  </section>
+
+  <!-- FAN BASE & COMMUNITY -->
+  <section id="fanbase" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>Fan Base & Community</h2>
+  <div style="background:none;padding:0;margin-bottom:2rem;">
+      <p>RCB boasts one of the most loyal and passionate fan armies in the world. From Bangalore to the globe, the "RCB Army" is everywhere! Share your RCB moments and join the family.</p>
+      <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin:2rem 0;">
+        <img src="fan photo 1.jpg" alt="RCB Fans" style="width:200px;border-radius:12px;box-shadow:0 2px 12px #ff1744;">
+        <img src="fan photo 2.jpg" alt="RCB Fans" style="width:200px;border-radius:12px;box-shadow:0 2px 12px #ff1744;">
+        <img src="fan photo 3.jpg" alt="RCB Fans" style="width:200px;border-radius:12px;box-shadow:0 2px 12px #ff1744;">
+      </div>
+      <form style="max-width:400px;margin:2rem auto 0 auto;text-align:left;background:#222;padding:1.5rem 2rem;border-radius:12px;box-shadow:0 2px 12px #ff1744;">
+        <h3 style="color:#ff1744;">Become a Fan</h3>
+        <input type="text" placeholder="Your Name" style="width:100%;padding:0.7rem;margin-bottom:1rem;border-radius:6px;border:none;">
+        <input type="email" placeholder="Your Email" style="width:100%;padding:0.7rem;margin-bottom:1rem;border-radius:6px;border:none;">
+        <button type="submit" style="width:100%;padding:0.7rem;background:#ff1744;color:#fff;font-weight:bold;border:none;border-radius:6px;">Join Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- UPCOMING MATCHES & LIVE UPDATES -->
+  <section id="matches" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>Upcoming Matches & Live Updates</h2>
+  <div style="background:none;padding:0;">
+      <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;">
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:200px;">
+          <h3>RCB vs MI</h3>
+          <p>12 Oct 2025, Chinnaswamy Stadium</p>
+        </div>
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:200px;">
+          <h3>RCB vs CSK</h3>
+          <p>18 Oct 2025, Chinnaswamy Stadium</p>
+        </div>
+      </div>
+      <div style="margin:2rem 0;">
+        <h3>Next Big Match Starts In:</h3>
+        <div id="countdown" style="font-size:2rem;color:#ff1744;font-weight:bold;"></div>
+      </div>
+      <!-- Optionally, add live score integration here -->
+    </div>
+  </section>
+
+  <!-- GALLERY (MOMENTS & HIGHLIGHTS) -->
+  <section id="gallery" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>Gallery: Moments & Highlights</h2>
+  <div style="background:none;padding:0;">
+      <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+        <img src="gallery moment 1.jpg" alt="Kohli 973 Runs" style="width:220px;border-radius:10px;box-shadow:0 2px 12px #ff1744;">
+        <img src="gallery moment 2.jpg" alt="Gayle 175*" style="width:220px;border-radius:10px;box-shadow:0 2px 12px #ff1744;">
+        <img src="gallery moment 3.jpg" alt="ABD Superhuman" style="width:220px;border-radius:10px;box-shadow:0 2px 12px #ff1744;">
+        <img src="gallery moment 5.jpg" alt="RCB Fans" style="width:220px;border-radius:10px;box-shadow:0 2px 12px #ff1744;">
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCHANDISE & SHOP -->
+  <section id="shop" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>Merchandise & Shop</h2>
+  <div style="background:none;padding:0;">
+      <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:180px;">
+          <img src="jersey .jpg" alt="RCB Jersey" style="width:100px;margin-bottom:0.5rem;">
+          <h3>RCB Jersey</h3>
+          <button style="padding:0.5rem 1.2rem;background:#ff1744;color:#fff;font-weight:bold;border:none;border-radius:6px;transition:background 0.2s;">Buy Now</button>
+        </div>
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:180px;">
+          <img src="cap.jpg" alt="RCB Cap" style="width:100px;margin-bottom:0.5rem;">
+          <h3>RCB Cap</h3>
+          <button style="padding:0.5rem 1.2rem;background:#ff1744;color:#fff;font-weight:bold;border:none;border-radius:6px;transition:background 0.2s;">Buy Now</button>
+        </div>
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:180px;">
+          <img src="cup.jpg" alt="RCB Mug" style="width:100px;margin-bottom:0.5rem;">
+          <h3>RCB Mug</h3>
+          <button style="padding:0.5rem 1.2rem;background:#ff1744;color:#fff;font-weight:bold;border:none;border-radius:6px;transition:background 0.2s;">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOYALTY & MEMBERSHIP -->
+  <section id="membership" class="section animate_animated animate_fadeInUp" style="text-align:center;">
+    <h2>Loyalty & Membership</h2>
+  <div style="background:none;padding:0;">
+      <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:220px;">
+          <h3>🎟 Early Ticket Access</h3>
+          <p>Get priority access to RCB match tickets before the public.</p>
+        </div>
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:220px;">
+          <h3>🤝 Meet & Greet</h3>
+          <p>Exclusive opportunities to meet your favorite RCB stars.</p>
+        </div>
+        <div style="background:#222;padding:1.2rem 2rem;border-radius:10px;min-width:220px;">
+          <h3>🏅 Fan Rewards</h3>
+          <p>Earn points for every match, win rewards and official merchandise.</p>
+        </div>
+      </div>
+      <p style="margin-top:1.5rem;font-size:1.1rem;">Become a member and unlock exclusive RCB experiences!</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer animate_animated animate_fadeInUp" style="background:#111;color:#fff;text-align:center;padding:2rem 0 1rem 0;margin-top:2rem;box-shadow:0 0 24px #ff1744;">
+    <div class="footer-links" style="margin-bottom:1rem;">
+      <a href="#about">About</a>
+      <a href="#records">Records</a>
+      <a href="#squad">Squad</a>
+      <a href="#fanbase">Fans</a>
+      <a href="#matches">Matches</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#shop">Shop</a>
+      <a href="#membership">Membership</a>
+    </div>
+    <div class="footer-social" style="margin-bottom:1rem;">
+      <a href="https://twitter.com/RCBTweets" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/reel/DINvjL1P1Cp/?igsh=a2R6NHBnZGhrdTFi" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/RoyalChallengersBangalore/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/user/RoyalChallengersTV" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p style="color:#ff1744;font-weight:bold;font-size:1.1rem;">Play Bold. <span style="color:gold;">Ee Sala Cup Namde!</span></p>
+    <p>&copy; 2025 Royal Challengers Bangalore. Made with ❤ by RCB Fans</p>
+  </footer>
+  <script src="main1.js"></script>
+  <script>
+    // Network effect: moving dots with connecting lines
+    (function(){
+      const canvas = document.getElementById('network-bg');
+      if (!canvas) return;
+      let ctx = canvas.getContext('2d');
+      let w = window.innerWidth, h = window.innerHeight;
+      let dpr = window.devicePixelRatio || 1;
+      function resize() {
+        w = window.innerWidth; h = window.innerHeight;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        ctx.setTransform(1,0,0,1,0,0);
+        ctx.scale(dpr, dpr);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+      // Dots
+      const DOTS = 60;
+      const dots = [];
+      for (let i = 0; i < DOTS; i++) {
+        dots.push({
+          x: Math.random()*w,
+          y: Math.random()*h,
+          vx: (Math.random()-0.5)*0.7,
+          vy: (Math.random()-0.5)*0.7,
+          r: 2 + Math.random()*2
+        });
+      }
+      function animate() {
+        ctx.clearRect(0,0,w,h);
+        // Draw lines
+        for (let i = 0; i < DOTS; i++) {
+          for (let j = i+1; j < DOTS; j++) {
+            let dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+            let dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 120) {
+              ctx.save();
+              ctx.globalAlpha = 0.18 * (1 - dist/120);
+              ctx.strokeStyle = '#ff1744';
+              ctx.beginPath();
+              ctx.moveTo(dots[i].x, dots[i].y);
+              ctx.lineTo(dots[j].x, dots[j].y);
+              ctx.stroke();
+              ctx.restore();
+            }
+          }
+        }
+        // Draw dots
+        for (let i = 0; i < DOTS; i++) {
+          ctx.save();
+          ctx.globalAlpha = 0.7;
+          ctx.fillStyle = '#fff';
+          ctx.beginPath();
+          ctx.arc(dots[i].x, dots[i].y, dots[i].r, 0, 2*Math.PI);
+          ctx.fill();
+          ctx.restore();
+          // Move
+          dots[i].x += dots[i].vx;
+          dots[i].y += dots[i].vy;
+          if (dots[i].x < 0 || dots[i].x > w) dots[i].vx *= -1;
+          if (dots[i].y < 0 || dots[i].y > h) dots[i].vy *= -1;
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  </script>
+  <script>
+    // Fireworks Animation
+    function launchFireworks() {
+      const container = document.getElementById('fireworks-container');
+      if (!container) return;
+      container.style.display = 'block';
+      for (let i = 0; i < 8; i++) {
+        const fw = document.createElement('div');
+        fw.className = 'firework';
+        fw.style.left = Math.random() * 90 + 'vw';
+        fw.style.top = (20 + Math.random() * 40) + 'vh';
+        container.appendChild(fw);
+        for (let j = 0; j < 18; j++) {
+          const particle = document.createElement('div');
+          particle.className = 'firework-particle';
+          particle.style.background = `hsl(${Math.random()*360},100%,60%)`;
+          particle.style.transform = `rotate(${j*20}deg) translateY(-40px)`;
+          fw.appendChild(particle);
+        }
+      }
+      setTimeout(() => {
+        container.style.display = 'none';
+        container.innerHTML = '';
+      }, 1000);
+    }
+
+    // Confetti Animation
+    function launchConfetti() {
+      const container = document.getElementById('confetti-container');
+      if (!container) return;
+      container.style.display = 'block';
+      const colors = ['#ff1744','#ffd600','#00e676','#2979ff','#fff','#ff9100','#d500f9'];
+      for (let i = 0; i < 80; i++) {
+        const conf = document.createElement('div');
+        conf.className = 'confetti';
+        conf.style.left = Math.random() * 100 + 'vw';
+        conf.style.background = colors[Math.floor(Math.random()*colors.length)];
+        conf.style.animationDelay = (Math.random()*0.7) + 's';
+        conf.style.width = (6 + Math.random()*8) + 'px';
+        conf.style.height = (12 + Math.random()*16) + 'px';
+        container.appendChild(conf);
+      }
+      setTimeout(() => {
+        container.style.display = 'none';
+        container.innerHTML = '';
+      }, 1000);
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      launchFireworks();
+      launchConfetti();
+    });
+  </script>
+  <style>
+    #fireworks-container .firework {
+      position: absolute;
+      width: 0; height: 0;
+      pointer-events: none;
+      animation: firework-pop 1s cubic-bezier(.2,.7,.4,1) forwards;
+    }
+    .firework-particle {
+      position: absolute;
+      width: 8px; height: 16px;
+      border-radius: 4px;
+      opacity: 0.85;
+      left: -4px; top: -8px;
+      transform-origin: 50% 40px;
+      animation: firework-particle 1s cubic-bezier(.2,.7,.4,1) forwards;
+    }
+    @keyframes firework-pop {
+      0% { opacity: 0; transform: scale(0.5); }
+      10% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0; transform: scale(1.2); }
+    }
+    @keyframes firework-particle {
+      0% { opacity: 0; transform: scaleY(0.2) translateY(0); }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; transform: scaleY(1) translateY(-60px); }
+    }
+    #confetti-container .confetti {
+      position: absolute;
+      top: -20px;
+      border-radius: 3px;
+      opacity: 0.85;
+      animation: confetti-fall 1s cubic-bezier(.2,.7,.4,1) forwards;
+    }
+    @keyframes confetti-fall {
+      0% { opacity: 0; transform: translateY(0) rotate(0deg); }
+      10% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(90vh) rotate(360deg); }
+    }
+  </style>

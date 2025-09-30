@@ -1,0 +1,388 @@
+.nav-logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: 0 2px 8px #ff1744aa;
+}
+
+@media (min-width: 801px) {
+  .section {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .players, .moments, .records, .legacy, .timeline {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* --- Responsive Enhancements for Mobile and Laptop --- */
+@media (max-width: 1100px) {
+  .section {
+    margin: 1rem 0.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 1rem;
+  }
+  .players, .moments, .records {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .player-card, .moment, .records > div {
+    width: 95vw;
+    min-width: unset;
+    max-width: 350px;
+  }
+  .legacy {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .legacy img {
+    width: 90vw;
+    max-width: 320px;
+  }
+  .timeline {
+    max-width: 95vw;
+    font-size: 0.98rem;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #222;
+    z-index: 100;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+  .nav.open {
+    height: 220px;
+    padding: 1rem 0;
+  }
+  .nav a {
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    width: 100vw;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .nav-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 18px;
+    background: #ff1744;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 2rem;
+    z-index: 200;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 801px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav {
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    height: auto !important;
+    overflow: visible !important;
+    background: #222;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+  }
+  .nav a {
+    border-bottom: none;
+    width: auto;
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 0;
+  }
+}
+/* RCB Fan Page - Inspired by CSK Fan Page */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #ff1744 100%);
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+  background: #111;
+  background: linear-gradient(135deg, #111 60%, #ff1744 100%);
+}
+.team-logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #ff1744;
+  margin: 0.5rem 0 0 0;
+  letter-spacing: 2px;
+}
+.hero h2 {
+  font-size: 2rem;
+  color: gold;
+  margin: 0.5rem 0 1rem 0;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #222;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: #ff1744;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: rgba(20,20,20,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+.section.dark {
+  background: #1a1a1a;
+}
+.section h2 {
+  color: #ff1744;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.player-card {
+  background: #222;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.player-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 6px 24px #ff1744aa;
+}
+.player-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+  border: 3px solid gold;
+}
+.player-card h3 {
+  margin: 0.5rem 0 0.2rem 0;
+  color: gold;
+  font-size: 1.1rem;
+}
+.player-card p {
+  margin: 0.2rem 0 0.5rem 0;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.player-card span {
+  color: #ff1744;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.records {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+.records > div {
+  background: #222;
+  border-radius: 10px;
+  padding: 1.2rem 2rem;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.records h3 {
+  color: gold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.event {
+  background: #222;
+  color: #fff;
+  border-left: 5px solid #ff1744;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  position: relative;
+}
+.event span {
+  color: gold;
+  font-weight: bold;
+  margin-right: 0.7rem;
+}
+
+.legacy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.legacy img {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #ff1744aa;
+}
+.legacy > div {
+  max-width: 400px;
+}
+.legacy h3 {
+  color: gold;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.moments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.moment {
+  background: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.moment img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px #ff174444;
+}
+.moment p {
+  color: gold;
+  font-size: 1rem;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  margin-top: 2rem;
+}
+.footer-links {
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: gold;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.footer-links a:hover {
+  color: #ff1744;
+}
+.footer-social {
+  margin-bottom: 1rem;
+}
+.footer-social a {
+  color: #ff1744;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: gold;
+}
+
+@media (max-width: 800px) {
+  .players, .moments, .records {
+    flex-direction: column;
+    align-items: center;
+  }
+  .legacy {
+    flex-direction: column;
+    align-items: center;
+  }
+}
